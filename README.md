@@ -26,7 +26,7 @@
 
 ## Demo
 
-You can see it in action on [Github](http://anatomio.github.io/hugo-image-archive-theme/).
+You can see it in action on [Github](http://anatomio.github.io/).
 
 ## Contents
 
