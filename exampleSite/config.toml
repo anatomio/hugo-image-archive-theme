@@ -1,7 +1,7 @@
 # Settings
-baseurl = "http://example.org/"
+baseurl = "https://anatomio.github.io/"
 languageCode = "en-us"
-title = "Image Archive"
+title = "Hugo Image Archive Theme"
 theme = "hugo-image-archive-theme"
 googleAnalytics = "UA-XXXXXXX-Y"
 
@@ -12,7 +12,7 @@ googleAnalytics = "UA-XXXXXXX-Y"
 [params]
 
     # Meta
-    description = "Image Archive - a collection of image archives"
+    description = "Hugo Image Archive Theme - a collection of image archives"
     author = "your name"
     keywords = "archive, hugo, photogallery, photoblog, hugo theme"
     

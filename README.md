@@ -1,11 +1,10 @@
-# Image Archive
+# Hugo Image Archive Theme
 
-"Image Archive" is a gallery of galleries, an image oriented portfolio or photoblog theme for Hugo. It is a port of the [Phugo theme](http://github.com/aerohub/phugo), which by itself is a port of the [HTML5 UP Multiverse template](https://html5up.net/multiverse).
+[Hugo Image Archive Theme](http://github.com/anatomio/hugo-image-gallery-theme) is a gallery of galleries, an image oriented portfolio or photoblog theme for Hugo. It is a port of the [Phugo theme](http://github.com/aerohub/phugo), which by itself is a port of the [HTML5 UP Multiverse template](https://html5up.net/multiverse).
 
 ## Screenshot
 
-# TODO: fork phugo on github and change url's below (AND in theme.toml)
-# TODO: change url:  ![Orbit screenshot](https://raw.githubusercontent.com/anatomio/image-archive/master/images/screenshot.png)
+![Orbit screenshot](https://raw.githubusercontent.com/anatomio/hugo-image-archive-theme/master/images/screenshot.png)
 
 ## Features
 
@@ -19,6 +18,7 @@
 ### Added
 
 - Multiple level albums support
+- jQuery Masonry
 - Taxonomies
 - Google Analytics
 - Basic breadcrumbs
@@ -26,7 +26,7 @@
 
 ## Demo
 
-# TODO: change url: You can see it in action on [Hugo Themes site](http://themes.gohugo.io/theme/phugo/).
+You can see it in action on [Github](http://anatomio.github.io/hugo-image-archive-theme/).
 
 ## Contents
 
@@ -46,10 +46,10 @@
 - Install Image Archive. Inside your new Hugo project run:
 
 ```
-$ git clone https://github.com/anatomio/image-archive themes/image-archive
+$ git clone https://github.com/anatomio/hugo-image-archive-theme themes/hugo-image-archive-theme
 ```
 
-# TODO: change url:  - Take a look inside the [`exampleSite`](//github.com/aerohub/phugo/tree/master/exampleSite) folder of this theme. You'll find a file called [`config.toml`](//github.com/aerohub/phugo/blob/master/exampleSite/config.toml). Copy the `config.toml` into the root folder of your Hugo site.
+- Take a look inside the [`exampleSite`](//github.com/anatomio/hugo-image-archive-theme/tree/master/exampleSite) folder of this theme. You'll find a file called [`config.toml`](//github.com/anatomio/hugo-image-archive-theme/blob/master/exampleSite/config.toml). Copy the `config.toml` into the root folder of your Hugo site.
 
 ## Configuration
 
@@ -104,14 +104,14 @@ You'll find your resume files in `public` folder in the root of Hugo project.
 
 # TODO: add Pagination support
 # TODO: add Translation support
-# TODO: add css masonry option instead of grid
-# TODO: add hugo-easy-gallery,
-# TODO: add cover-flow image caroussel 
+# TODO: add masonry shortcode for content pages
+# TODO: add hugo-easy-gallery shortcode for content pages,
+# TODO: add cover-flow image caroussel shortcode for content pages 
 
 
 ## Contributing
 
-# TODO: change url: Did you found a bug or got an idea? Feel free to use the [issue tracker](//github.com/anatomio/image-archive/issues).
+Did you found a bug or got an idea? Feel free to use the [issue tracker](//github.com/anatomio/hugo-image-archive-theme/issues).
 
 ## License
 
