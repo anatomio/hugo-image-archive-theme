@@ -57,12 +57,12 @@ em, i { font-style: italic; }
 
 p { margin: 0 0 2em 0; }
 
-h1, h2, h3, h4, h5, h6 { color: #ffffff; font-weight: 300; letter-spacing: 0.1em; line-height: 1.5; margin: 0 0 1em 0; text-transform: uppercase; }
+h1, h2, h3, h4, h5, h6, figcaption { color: #ffffff; font-weight: 300; letter-spacing: 0.1em; line-height: 1.5; margin: 0 0 1em 0; text-transform: uppercase; }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: inherit; text-decoration: none; }
 
 h1 { font-size: 2em; }
 
-h2 { font-size: 1.25em; }
+h2, figcaption { font-size: 1.25em; }
 
 h3 { font-size: 1.1em; }
 
@@ -281,13 +281,17 @@ body.loading #header { -moz-transform: translateY(4em); -webkit-transform: trans
 #header nav > ul > li a:hover { color: #ffffff !important; }
 #header nav > ul > li a.active { background-color: #242629; }
 
-@media screen and (max-width: 736px) { body { padding: 4em 0 0 0; }
-  #header { -moz-transform: translateY(0); -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); bottom: auto; height: 4em; padding: 0 1em; top: 0; }
-  body.loading #header { -moz-transform: translateY(-3.4em); -webkit-transform: translateY(-3.4em); -ms-transform: translateY(-3.4em); transform: translateY(-3.4em); }
-  #header h1 { font-size: 0.9em; }
-  #header nav > ul > li a { font-size: 0.9em; padding: 0 1.15em; } }
+@media screen and (max-width: 736px) { 
+	body { padding: 4em 0 0 0; }
+	#header { -moz-transform: translateY(0); -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); bottom: auto; height: 4em; padding: 0 1em; top: 0; }
+	body.loading #header { -moz-transform: translateY(-3.4em); -webkit-transform: translateY(-3.4em); -ms-transform: translateY(-3.4em); transform: translateY(-3.4em); }
+	#header h1 { font-size: 0.9em; }
+	#header nav > ul > li a { font-size: 0.9em; padding: 0 1.15em; } 
+}
+
 /* Main */
-#main { -moz-transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, -moz-filter 0.5s ease; -webkit-transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, -webkit-filter 0.5s ease; -ms-transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, -ms-filter 0.5s ease; transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, filter 0.5s ease; display: -moz-flex; display: -webkit-flex; display: -ms-flex; display: flex; -moz-flex-wrap: wrap; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
+
+#main.single { -moz-transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, -moz-filter 0.5s ease; -webkit-transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, -webkit-filter 0.5s ease; -ms-transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, -ms-filter 0.5s ease; transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, filter 0.5s ease; display: -moz-flex; display: -webkit-flex; display: -ms-flex; display: flex; -moz-flex-wrap: wrap; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
 #main .thumb { -moz-transition: opacity 1.25s ease-in-out; -webkit-transition: opacity 1.25s ease-in-out; -ms-transition: opacity 1.25s ease-in-out; transition: opacity 1.25s ease-in-out; -moz-pointer-events: auto; -webkit-pointer-events: auto; -ms-pointer-events: auto; pointer-events: auto; -webkit-tap-highlight-color: rgba(255, 255, 255, 0); opacity: 1; overflow: hidden; position: relative; }
 #main .thumb:after { background-image: -moz-linear-gradient(to top, rgba(10,17,25,0.35) 5%, rgba(10,17,25,0) 35%); background-image: -webkit-linear-gradient(to top, rgba(10,17,25,0.35) 5%, rgba(10,17,25,0) 35%); background-image: -ms-linear-gradient(to top, rgba(10,17,25,0.35) 5%, rgba(10,17,25,0) 35%); background-image: linear-gradient(to top, rgba(10,17,25,0.35) 5%, rgba(10,17,25,0) 35%); -moz-pointer-events: none; -webkit-pointer-events: none; -ms-pointer-events: none; pointer-events: none; background-size: cover; content: ''; display: block; height: 100%; left: 0; position: absolute; top: 0; width: 100%; }
 #main .thumb > .image { -webkit-tap-highlight-color: rgba(255, 255, 255, 0); background-position: center; background-repeat: no-repeat; background-size: cover; border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%; }
@@ -345,6 +349,93 @@ body.loading #main .thumb { -moz-pointer-events: none; -webkit-pointer-events: n
   #main .thumb:nth-child(1) { -moz-transition-delay: 0.65s; -webkit-transition-delay: 0.65s; -ms-transition-delay: 0.65s; transition-delay: 0.65s; }
   #main .thumb:nth-child(2) { -moz-transition-delay: 0.8s; -webkit-transition-delay: 0.8s; -ms-transition-delay: 0.8s; transition-delay: 0.8s; }
   #main .thumb:nth-child(3) { -moz-transition-delay: 0.95s; -webkit-transition-delay: 0.95s; -ms-transition-delay: 0.95s; transition-delay: 0.95s; } }
+
+/* responsive:
+phugo				(vertraagd)
+default		25%		(12)
+max1680		33.33%	(9)
+max1280		50%		(6)		
+max980		50%		(9)		
+max480		100%	(3)					
+
+anatomiold
+default 	16.66%
+max 1504 	25%
+max 1024 	33.33%
+max 768		50% 
+max 480		100%
+
+css tricks 2011 pure css masonry
+max 1200 	4 cols
+max 1000 	3 cols
+max 800 	2 cols
+max 400 	1 col
+
+codeburst 2017 true masonry flexbox plus js
+min 1500xl		25%
+min 992	lg		33.3333%
+min 768	md		50%
+min 430 sm (def)100%
+
+pinterest
+260 per kolom (240+20) -->
+min 520, 780, 1040, 1300 , 1560
+*/
+
+/* tbv jquery-masonry */
+
+#main.list{
+	max-width: 1280px;
+	margin: 0 auto;
+	
+}
+.masonry-gallery{
+	width: 310px;
+	margin: 0 auto;
+}
+.masonry-panel { 
+	width: 310px;
+}
+
+@media only screen and ( min-width: 640px ) 
+{
+    .masonry-gallery
+    {
+        width: 630px;
+    }
+}
+@media only screen and ( min-width: 960px )
+{
+    .masonry-gallery
+    {
+        width: 950px;
+    }
+}
+@media only screen and ( min-width: 1280px )
+{
+    .masonry-gallery
+    {
+        width: 1270px;
+    }
+}
+	
+.masonry-panel > a{
+ 	border: 0;
+}
+.masonry-panel img { 
+	width: 310px; 
+	margin-bottom: 4px; /* should be 10px, because of gutter:10, but correcting for absolute positioned caption */
+	border-radius:10px;
+}
+.masonry-panel > figcaption { 
+	-moz-pointer-events: none; -webkit-pointer-events: none; -ms-pointer-events: none; pointer-events: none; 
+	bottom: 30px;
+	font-size: 0.8em; 
+	left: 30px;
+	margin: 0; 
+	position: absolute; 
+	z-index: 1; 
+}
 
 /* Footer */
 #footer .copyright { color: #505051; font-size: 0.9em; }

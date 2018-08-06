@@ -1,10 +1,50 @@
 {{ define "main" }}
-    <div id="main">
-       {{ range (where .Site.Pages "Kind" "section").ByDate.Reverse }}
-            <article class="thumb">
-                <a href="{{ .Permalink }}" class="link"><img src="{{ .Params.albumthumb }}" alt="{{ .Title }}" /></a>
-                <h2>{{ .Title }}</h2>
-            </article>
-        {{ end }}
+    <div id="main" class="list">
+	{{ with .Content }}
+		<section id="content">
+			{{- . -}}
+		</section>
+	{{ end }}
+		<section class="masonry-gallery">
+		{{/* if configured to display only child folders and pages */}}
+		{{ if  eq $.Site.Params.list.display "children"  }}
+
+			{{ $sections := (.Site.GetPage "section" .Section).Sections }}
+			{{ range $sections }} {{/* display folders first */}}
+				<figure class="masonry-panel">
+					<a href="{{ .Permalink }}" class="link"><img src="{{ .Params.albumthumb }}" alt="{{ .Title }}" class="loading" /></a>
+					<h2>{{ .Title }}</h2>
+				</figure>
+			{{ end }}
+
+			{{ if .IsHome }}
+				{{ $pageSection := .CurrentSection }}
+				{{ range .Pages.ByDate.Reverse }}
+					{{/* don't display all descendant pages */}}
+					{{ if eq .CurrentSection $pageSection  }}
+						<figure class="masonry-panel">
+							<a href="{{ .Permalink }}" class="link"><img src="{{ .Params.albumthumb }}" alt="{{ .Title }}" class="loading" /></a>
+							<figcaption>{{ .Title }}</figcaption>
+						</figure>
+					{{ end }}
+				{{ end }}
+			{{ else }}
+				{{ range .Pages.ByDate.Reverse }}
+					<figure class="masonry-panel">
+						<a href="{{ .Permalink }}" class="link"><img src="{{ .Params.albumthumb }}" alt="{{ .Title }}" class="loading" /></a>
+						<figcaption>{{ .Title }}</figcaption>
+					</figure>
+				{{ end }}
+			{{ end }}
+
+		{{ else }} {{/* default */}}
+				{{ range .Pages.ByDate.Reverse }}
+					<figure class="masonry-panel">
+						<a href="{{ .Permalink }}" class="link"><img src="{{ .Params.albumthumb }}" alt="{{ .Title }}" class="loading" /></a>
+						<figcaption>{{ .Title }}</figcaption>
+					</figure>
+				{{ end }}
+		{{ end }}
+		</section>
     </div>
 {{ end }}

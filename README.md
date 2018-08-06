@@ -1,10 +1,11 @@
-# Phugo
+# Image Archive
 
-Phugo [ˈfjuːgəʊ] is a gallery/photoblog theme for Hugo. It is a port of HTML5 UP [Multiverse template](https://html5up.net/multiverse).
+"Image Archive" is a gallery of galleries, an image oriented portfolio or photoblog theme for Hugo. It is a port of the [Phugo theme](http://github.com/aerohub/phugo), which by itself is a port of the [HTML5 UP Multiverse template](https://html5up.net/multiverse).
 
 ## Screenshot
 
-![Orbit screenshot](https://raw.githubusercontent.com/aerohub/phugo/master/images/screenshot.png)
+# TODO: fork phugo on github and change url's below (AND in theme.toml)
+# TODO: change url:  ![Orbit screenshot](https://raw.githubusercontent.com/anatomio/image-archive/master/images/screenshot.png)
 
 ## Features
 
@@ -17,14 +18,15 @@ Phugo [ˈfjuːgəʊ] is a gallery/photoblog theme for Hugo. It is a port of HTML
 
 ### Added
 
-- One level albums support
+- Multiple level albums support
+- Taxonomies
 - Google Analytics
 - Basic breadcrumbs
 - Working contact form
 
 ## Demo
 
-You can see it in action on [Hugo Themes site](http://themes.gohugo.io/theme/phugo/).
+# TODO: change url: You can see it in action on [Hugo Themes site](http://themes.gohugo.io/theme/phugo/).
 
 ## Contents
 
@@ -41,13 +43,13 @@ You can see it in action on [Hugo Themes site](http://themes.gohugo.io/theme/phu
 ## Installation
 
 - [Install Hugo](//gohugo.io/overview/installing/) and create a new site.
-- Install Phugo. Inside your new Hugo project run:
+- Install Image Archive. Inside your new Hugo project run:
 
 ```
-$ git clone https://github.com/aerohub/phugo themes/phugo
+$ git clone https://github.com/anatomio/image-archive themes/image-archive
 ```
 
-- Take a look inside the [`exampleSite`](//github.com/aerohub/phugo/tree/master/exampleSite) folder of this theme. You'll find a file called [`config.toml`](//github.com/aerohub/phugo/blob/master/exampleSite/config.toml). Copy the `config.toml` into the root folder of your Hugo site.
+# TODO: change url:  - Take a look inside the [`exampleSite`](//github.com/aerohub/phugo/tree/master/exampleSite) folder of this theme. You'll find a file called [`config.toml`](//github.com/aerohub/phugo/blob/master/exampleSite/config.toml). Copy the `config.toml` into the root folder of your Hugo site.
 
 ## Configuration
 
@@ -60,13 +62,13 @@ Now you are ready to create your first photopost/album.
 Inside your project run:
 
 ```
-$ hugo new NAME-OF-YOUR-ALBUM/_index.md
+$ hugo new NAME-OF-YOUR-SECTION/NAME-OF-YOUR-POST/index.md
 ```
-It will create an index file of your first album. Open `content/NAME-OF-YOUR-ALBUM/_index.md` with your text editor. You'll see something like this:
+It will create an index file of your first album. Open `content/NAME-OF-YOUR-SECTION/NAME-OF-YOUR-POST/index.md` with your text editor. You'll see something like this:
 
 ```
 +++
-albumthumb = "path/to/album/cover/image"
+albumthumb = "/full/path/to/album/cover/image"
 date = "2016-10-21T19:07:17+03:00"
 title = "index"
 +++
@@ -97,11 +99,19 @@ You'll find your resume files in `public` folder in the root of Hugo project.
 ## Roadmap
 
 - [ ] Pagination support
-- [ ] Taxonomies
+- [ ] Translation support
+
+
+# TODO: add Pagination support
+# TODO: add Translation support
+# TODO: add css masonry option instead of grid
+# TODO: add hugo-easy-gallery,
+# TODO: add cover-flow image caroussel 
+
 
 ## Contributing
 
-Did you found a bug or got an idea? Feel free to use the [issue tracker](//github.com/aerohub/hugo-orbit-theme/issues).
+# TODO: change url: Did you found a bug or got an idea? Feel free to use the [issue tracker](//github.com/anatomio/image-archive/issues).
 
 ## License
 

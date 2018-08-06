@@ -1,8 +1,5 @@
 /*
-	Phugo - Photogallery Theme for Hugo
-	by Pavel Kanyshev | github.com/aerohub
-	It's based on Multiverse by HTML5 UP
-	html5up.net | @ajlkn
+	"Image Archive" is a gallery of galleries, an image oriented portfolio or photoblog theme for Hugo. It is a port of the [Phugo theme](http://github.com/aerohub/phugo), which by itself is a port of the [HTML5 UP Multiverse template](https://html5up.net/multiverse).
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
@@ -336,3 +333,16 @@
 	});
 
 })(jQuery);
+
+/* tbv masonry-jquery */
+var $grid = $('.masonry-gallery').masonry({
+  // options
+  itemSelector: '.masonry-panel',
+  columnWidth: '.masonry-panel',
+	gutter: 10,
+	fitWidth: true,
+	transitionDuration: '0.8s'
+});
+$grid.imagesLoaded().progress( function() {
+  $grid.masonry('layout');
+});

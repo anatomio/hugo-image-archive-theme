@@ -1,17 +1,20 @@
-name = "Phugo"
-license = "CCA 3.0 Unported"
-licenselink = "//github.com/aerohub/phugo/LICENSE.md"
+name = "Image Archive"
+license = "Creative Commons Attribution 3.0 Unported (CC BY 3.0)"
+# TODO: change licenselink = "//github.com/aerohub/phugo/LICENSE.md"
 description = "Image gallery/Photoblog Theme for Hugo."
-homepage = "//github.com/aerohub/phugo"
-tags = ["image gallery", "photoblog", "shortcode"]
+# TODO: check homepage = "//github.com/anatomio/image-archive"
+tags = ["archive", "portfolio", "photo blog", "image gallery", "shortcode"]
 features = ["albums", "contact form", "breadcrumbs", "GA"]
-min_version = 0.18
+min_version = 0.33
 
 [author]
-  name = "Pavel Kanyshev"
-  homepage = "//github.com/aerohub"
+  name = "Mio van der Lijn"
+  homepage = "//github.com/anatomio"
 
 # If porting an existing theme
 [original]
   name = "Multiverse"
   homepage = "//html5up.net/multiverse"
+[first-port]
+  name = phugo by Pavel Kanyshev
+  homepage = "//github.com/aerohub/phugo"

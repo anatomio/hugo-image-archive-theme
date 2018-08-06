@@ -1,16 +1,20 @@
 # Settings
 baseurl = "http://example.org/"
 languageCode = "en-us"
-title = "Phugo"
-theme = "phugo"
+title = "Image Archive"
+theme = "hugo-image-archive-theme"
 googleAnalytics = "UA-XXXXXXX-Y"
+
+[taxonomies]
+    tag = "tags"
+    category = "categories"
 
 [params]
 
     # Meta
-    description = "Phugo - Photo Gallery on Hugo"
-    author = "aerohub"
-    keywords = "phugo, hugo, photogallery, photoblog, hugo theme"
+    description = "Image Archive - a collection of image archives"
+    author = "your name"
+    keywords = "archive, hugo, photogallery, photoblog, hugo theme"
     
     # Headerbar links
     # Do not put here too many links,
@@ -96,3 +100,9 @@ googleAnalytics = "UA-XXXXXXX-Y"
     # Copyright
     [params.footer.copyright]
     name = "Your name"
+	
+	[params.list]
+	# what to list in a list page? 
+	# - descendants = descendant regular content pages (default)
+	# - children = child sections and pages
+	display = "descendants"
